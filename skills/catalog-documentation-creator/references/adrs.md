@@ -3,7 +3,7 @@
 ## Format
 
 **File:** `index.mdx` inside an ADR folder
-**Location:** `adrs/{adr-id}/index.mdx`
+**Location:** `adrs/{adr-id}/index.mdx`, or nested near the resource it applies to, e.g. `domains/{Domain}/systems/{System}/adrs/{adr-id}/index.mdx`
 
 ADRs are first-class, versioned EventCatalog resources for documenting significant architecture decisions and linking them to the resources they affect.
 
@@ -39,6 +39,7 @@ The `appliesTo` field supports these resource types:
 - `flow`
 - `channel`
 - `domain`
+- `system`
 - `user`
 - `team`
 - `container`
@@ -65,6 +66,8 @@ decisionMakers:
 appliesTo:
   - type: domain
     id: Orders
+  - type: system
+    id: checkout-system
   - type: service
     id: OrdersService
   - type: event
@@ -135,4 +138,5 @@ The approach produced poor customer outcomes when stock was exhausted after paym
 - Use `deprecated` when a decision is no longer recommended but not directly replaced.
 - Prefer `Context`, `Decision`, and `Consequences` headings in the body.
 - Link affected resources with `appliesTo` so ADRs appear on related resource pages.
+- ADRs that mainly describe a system boundary, persistence model, integration pattern, or ownership model can live under that system's `adrs/` folder and should include `type: system` in `appliesTo`.
 - Keep ADR IDs stable across versions.

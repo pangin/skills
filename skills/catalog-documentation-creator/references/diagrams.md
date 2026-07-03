@@ -3,7 +3,7 @@
 ## Format
 
 **File:** `index.mdx` inside a diagram folder
-**Location:** `diagrams/{DiagramName}/index.mdx` or nested under a domain/subdomain, e.g. `domains/{Domain}/diagrams/{DiagramName}/index.mdx`
+**Location:** `diagrams/{DiagramName}/index.mdx`, nested under a domain/subdomain, e.g. `domains/{Domain}/diagrams/{DiagramName}/index.mdx`, or nested under a system (`systems/{System}/diagrams/{DiagramName}/index.mdx`, `domains/{Domain}/systems/{System}/diagrams/{DiagramName}/index.mdx`)
 
 Diagram resources are reusable, versioned pages for architecture diagrams, sequence diagrams, event storming outputs, system maps, or other visual models.
 

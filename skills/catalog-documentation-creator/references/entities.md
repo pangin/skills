@@ -3,7 +3,7 @@
 ## Format
 
 **File:** `index.mdx` inside an entity folder
-**Location:** `entities/{EntityName}/index.mdx`, `domains/{Domain}/entities/{EntityName}/index.mdx`, or `services/{Service}/entities/{EntityName}/index.mdx`
+**Location:** `entities/{EntityName}/index.mdx`, `domains/{Domain}/entities/{EntityName}/index.mdx`, `services/{Service}/entities/{EntityName}/index.mdx`, or nested under a system (`systems/{System}/entities/{EntityName}/index.mdx`, `domains/{Domain}/systems/{System}/entities/{EntityName}/index.mdx`)
 
 Entities document domain concepts, aggregates, business objects, and persisted models. They are useful for DDD catalogs, data model documentation, and service-owned concepts.
 
@@ -94,7 +94,7 @@ The Order entity captures all details related to a customer's purchase request. 
 - Use `identifier` for the primary identifier property.
 - Use `references`, `referencesIdentifier`, and `relationType` to model relationships.
 - Include `<EntityPropertiesTable />` when `properties` are documented.
-- Link entities from domain or service frontmatter:
+- Link entities from domain, service, or system frontmatter:
   ```yaml
   entities:
     - id: Order
