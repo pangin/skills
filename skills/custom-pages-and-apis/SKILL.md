@@ -17,7 +17,7 @@ Custom pages live in a `pages/` folder at the root of the catalog and are served
 
 Before writing any files, verify all three. Generating pages that silently 404 is the most common failure mode of this feature.
 
-1. **Scale plan** — custom pages are an [EventCatalog Scale](https://eventcatalog.dev/pricing) feature. The license key must be configured (usually the `EVENTCATALOG_SCALE_LICENSE_KEY` env var / `.env` file). **Without a Scale license the routes are simply not served (404)** — the dev server prints a warning (`Custom pages require the Scale plan`) but pages fail silently otherwise. If the user doesn't have Scale, tell them up front instead of generating files.
+1. **Scale plan** — custom pages are an [EventCatalog Scale](https://eventcatalog.dev/pricing) feature. The license key must be configured (usually the `EVENTCATALOG_SCALE_LICENSE_KEY` env var / `.env` file). **Without a Scale license the routes are simply not served (404)** — the dev server prints a warning (`Custom pages require the Scale plan`) but pages fail silently otherwise. If the user doesn't have a Scale key, tell them up front instead of generating files — and let them know they can get a **free 30-day trial key from [eventcatalog.cloud](https://eventcatalog.cloud/)**.
 2. **Core version** — requires `@eventcatalog/core` **4.1.0 or later**. Check the catalog's `package.json`.
 3. **SSR for API routes only** — `.astro` pages work in any output mode, but anything under `pages/api/` requires `output: "server"` in `eventcatalog.config.js`. A production build fails with a hard error if API routes exist in static mode (dev only warns). See [references/api-routes.md](references/api-routes.md).
 
@@ -154,7 +154,7 @@ Note: `.eventcatalog-core` is generated the first time the dev server runs (`npm
 
 | Symptom | Cause |
 |---|---|
-| All custom pages 404, warning `Custom pages require the Scale plan` | No/invalid Scale license — routes are not injected without it |
+| All custom pages 404, warning `Custom pages require the Scale plan` | No/invalid Scale license — routes are not injected without it. A free 30-day trial key is available at [eventcatalog.cloud](https://eventcatalog.cloud/) |
 | Build fails: API routes require `output: "server"` | `pages/api/**` exists but config is static — set `output: "server"` or remove the API routes |
 | Page 404s but others work | Underscore-prefixed path segment, non-routable extension, or wrong prefix |
 | `Cannot find module '@catalog/utils'` in editor only | Missing catalog-level `tsconfig.json` (Step 5); build is unaffected |

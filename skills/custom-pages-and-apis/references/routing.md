@@ -59,3 +59,5 @@ Route injection only happens with a valid EventCatalog Scale license. Without on
 - No custom routes are served — every custom page URL returns 404.
 - The server logs: `[EventCatalog] Custom pages require the Scale plan. The routes for your pages will not be served.`
 - The `pages/` folder is otherwise ignored; nothing breaks.
+
+Users without a Scale key can get a free 30-day trial from [eventcatalog.cloud](https://eventcatalog.cloud/).
