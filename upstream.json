@@ -1,0 +1,86 @@
+{
+  "$comment": "Machine-readable upstream metadata. Human guide: UPSTREAM.md. Updated by .github/workflows/upstream-sync.yml (sha.fetched/integrated) — never edit sha.pinned.",
+  "repository": "pangin/skills",
+  "upstream": {
+    "url": "https://github.com/event-catalog/skills.git",
+    "web": "https://github.com/event-catalog/skills",
+    "defaultBranch": "main",
+    "relation": "github-fork (public, inside the fork network)"
+  },
+  "branches": {
+    "main": "main",
+    "vendor": "vendor/upstream-main",
+    "syncBranchPrefix": "sync/upstream-"
+  },
+  "sha": {
+    "pinned": "5f5c51b2e3487c404ce4732ac4294fe57d83999b",
+    "pinnedAt": "2026-07-09T11:42:33+01:00",
+    "pinnedTag": null,
+    "fetched": "5f5c51b2e3487c404ce4732ac4294fe57d83999b",
+    "fetchedAt": "2026-09-02T05:59:15Z",
+    "integrated": "5f5c51b2e3487c404ce4732ac4294fe57d83999b",
+    "integratedAt": "2026-09-02T05:59:15Z"
+  },
+  "owner": {
+    "github": "pangin",
+    "name": "성욱 (pangin)"
+  },
+  "sync": {
+    "cadence": "매주 월요일 00:00 UTC (09:00 KST) 예약 실행 + workflow_dispatch 수동 실행",
+    "workflow": ".github/workflows/upstream-sync.yml",
+    "identity": "deploy key \"upstream-sync\" (secret UPSTREAM_SYNC_SSH_KEY); fallback GITHUB_TOKEN with warning",
+    "mergeStrategy": "merge commit only (squash/rebase disabled at repository level)",
+    "botPushesMain": false
+  },
+  "role": {
+    "classification": "optional",
+    "reason": "EventCatalog 문서화를 돕는 AI 에이전트 skill(Markdown/YAML)만 포함. 코드·패키지 없음, core 빌드·기동과 무관."
+  },
+  "licenseBoundary": {
+    "root": "MIT",
+    "commercialPaths": [],
+    "productionRestriction": "없음",
+    "licenseKeyEnvVars": [],
+    "ossOnlyPolicy": "해당 없음",
+    "licenseFiles": [
+      "LICENSE"
+    ],
+    "noticeFiles": []
+  },
+  "build": {
+    "node": "n/a",
+    "packageManager": "none",
+    "lockfiles": [],
+    "install": "n/a",
+    "build": "n/a",
+    "test": "n/a",
+    "run": "n/a (에이전트 호스트에서 npx skills add pangin/skills)",
+    "smoke": "skills/*/SKILL.md 5개가 존재하고 frontmatter에 name: 이 있음",
+    "verifyWorkflow": ".github/workflows/fork-verify.yml"
+  },
+  "upstreamWorkflows": [],
+  "protection": {
+    "main": [
+      "pull-request-only",
+      "required review 1 (admin bypass for PR merge)",
+      "required checks: Fork Verify jobs",
+      "merge commit only",
+      "no force-push",
+      "no deletion"
+    ],
+    "vendor/upstream-main": [
+      "updates only by sync identity (deploy key)",
+      "no force-push",
+      "no deletion"
+    ],
+    "appliedAt": null,
+    "note": "GitHub rulesets on public repos (Free plan). appliedAt is filled when rulesets are active."
+  },
+  "linear": [
+    "GONG-871",
+    "GONG-872",
+    "GONG-876",
+    "GONG-875"
+  ],
+  "generatedAt": "2026-09-02T05:59:15Z"
+}
