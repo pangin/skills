@@ -17,9 +17,9 @@
     "pinnedAt": "2026-07-09T11:42:33+01:00",
     "pinnedTag": null,
     "fetched": "5f5c51b2e3487c404ce4732ac4294fe57d83999b",
-    "fetchedAt": "2026-09-02T06:07:17Z",
+    "fetchedAt": "2026-09-02T06:12:59Z",
     "integrated": "5f5c51b2e3487c404ce4732ac4294fe57d83999b",
-    "integratedAt": "2026-09-02T06:07:17Z"
+    "integratedAt": "2026-09-02T06:12:59Z"
   },
   "owner": {
     "github": "pangin",
@@ -75,5 +75,5 @@
     "note": "GitHub rulesets on public repos (Free plan). appliedAt is filled when rulesets are active."
   },
   "linear": ["GONG-871", "GONG-872", "GONG-876", "GONG-875"],
-  "generatedAt": "2026-09-02T06:07:17Z"
+  "generatedAt": "2026-09-02T06:12:59Z"
 }
